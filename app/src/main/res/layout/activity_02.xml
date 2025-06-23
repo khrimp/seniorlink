@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:parentActivityName=".MainActivity"
+    tools:context=".Activity02">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:parentActivityName=".MainActivity"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        android:text="반갑습니다!\n 무엇을 도와드릴까요?"
+        android:textColor="#03377F"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="190dp"
+            android:layout_height="270dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_left"
+            android:drawableBottom="@drawable/business"
+            android:gravity="top|center_horizontal"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingVertical="36dp"
+            android:text="사업자로\n등록하기"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@null" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="270dp"
+            android:background="#6086E9" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="190dp"
+            android:layout_height="270dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_right"
+            android:drawableBottom="@drawable/old_worker"
+            android:gravity="top|center_horizontal"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingVertical="36dp"
+            android:text="근무자로\n지원하기"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/bottom_toolbar"
+        layout="@layout/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
