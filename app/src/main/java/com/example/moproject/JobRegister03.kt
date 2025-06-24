@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.moproject.databinding.ActivityJobRegister03Binding
-import com.example.moproject.databinding.ActivityJobRegisterBinding
 
 class JobRegister03 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

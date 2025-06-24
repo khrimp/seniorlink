@@ -12,6 +12,7 @@
 
         <!-- 아이디 -->
         <EditText
+            android:id="@+id/etLoginId"
             android:hint="아이디"
             android:textSize="30sp"
             android:layout_width="match_parent"
@@ -20,6 +21,7 @@
 
         <!-- 비밀번호 -->
         <EditText
+            android:id="@+id/etPassword"
             android:hint="비밀번호"
             android:textSize="30sp"
             android:inputType="textPassword"
@@ -29,14 +31,17 @@
 
         <!-- 이름 -->
         <EditText
+            android:id="@+id/etName"
             android:hint="이름"
             android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:inputType="textPersonName" />
 
         <!-- 나이 -->
         <EditText
+            android:id="@+id/etAge"
             android:hint="나이"
             android:textSize="30sp"
             android:inputType="number"
@@ -46,6 +51,7 @@
 
         <!-- 휴대폰 번호 -->
         <EditText
+            android:id="@+id/etPhone"
             android:hint="휴대폰 번호"
             android:textSize="30sp"
             android:inputType="phone"
@@ -53,36 +59,32 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp" />
 
-        <!-- 노동자 / 고용자 선택 -->
-        <LinearLayout
-            android:orientation="horizontal"
+        <RadioGroup
+            android:id="@+id/radioGroupType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="24dp">
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
 
-            <Button
-                android:id="@+id/btnWorker"
+            <RadioButton
+                android:id="@+id/radioWorker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="노동자"
-                android:textSize="40sp"
+                android:textSize="30sp"
+                android:buttonTint="@color/blue" />
+
+            <RadioButton
+                android:id="@+id/radioEmployer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:minHeight="120dp"
-                android:layout_weight="1" />
-
-            <Space
-                android:layout_width="16dp"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnEmployer"
+                android:layout_weight="1"
                 android:text="고용자"
-                android:textSize="40sp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:minHeight="120dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:textSize="30sp"
+                android:buttonTint="@color/blue" />
+        </RadioGroup>
 
         <!-- 지역 선택 버튼 -->
         <Button
@@ -92,7 +94,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="120dp"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="@color/blue" />
 
         <!-- 회원가입 완료 버튼 -->
         <Button
@@ -101,7 +105,9 @@
             android:textSize="40sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="120dp" />
+            android:minHeight="120dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="@color/blue" />
     </LinearLayout>
 
 </ScrollView>

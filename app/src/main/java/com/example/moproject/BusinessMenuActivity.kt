@@ -17,6 +17,7 @@ class BusinessMenuActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityBusinessMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val token = intent.getStringExtra("token")
 
         // 툴바 설정
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -47,6 +48,7 @@ class BusinessMenuActivity : AppCompatActivity() {
         btnProfile.setOnClickListener {
             // 프로필 화면 이동
             val intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra("token", token)
             startActivity(intent)
         }
 

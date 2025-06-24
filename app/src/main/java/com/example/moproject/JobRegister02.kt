@@ -8,13 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.moproject.databinding.ActivityJobRegisterBinding
+import com.example.moproject.databinding.ActivityJobRegister02Binding
 
 class JobRegister02 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val binding = ActivityJobRegisterBinding.inflate(layoutInflater)
+        val binding = ActivityJobRegister02Binding.inflate(layoutInflater)
         //setContentView(R.layout.activity_job_register)
         setContentView(binding.root)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)

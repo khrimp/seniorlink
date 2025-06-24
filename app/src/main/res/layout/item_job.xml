@@ -66,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="동네 설정"
+                    android:textSize="16sp"
                     android:textColor="@android:color/white"
                     android:backgroundTint="@color/orange" />
 
@@ -73,7 +74,8 @@
                     android:id="@+id/btnApplicantStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="지원 현황 보기"
+                    android:text="지원 현황"
+                    android:textSize="16sp"
                     android:textColor="@android:color/white"
                     android:layout_marginStart="12dp"
                     android:backgroundTint="@color/blue" />
