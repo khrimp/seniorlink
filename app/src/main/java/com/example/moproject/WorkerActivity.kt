@@ -24,6 +24,7 @@ class WorkerActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "근무자로 지원"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val token = intent.getStringExtra("token")
 
         val states = arrayOf(
             intArrayOf(android.R.attr.state_pressed),
@@ -68,6 +69,7 @@ class WorkerActivity : AppCompatActivity() {
         btnProfile.setOnClickListener {
             // 프로필 화면 이동
             val intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra("token", token)
             startActivity(intent)
         }
 

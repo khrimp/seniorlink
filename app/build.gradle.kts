@@ -50,4 +50,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.glide)
     kapt(libs.glidecompiler)
+    implementation (libs.squareup.retrofit)
+    implementation (libs.converter.gson)
 }
